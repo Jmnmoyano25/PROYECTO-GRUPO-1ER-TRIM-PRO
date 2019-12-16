@@ -4,13 +4,19 @@ public class Biblioteca {
 
 	//ATRIBUTOS
 	 int numeros;
-	 int[] n;
+	 int n;
+	 
+	 
+	 //ATRIBUTOS 4
+	 
 	 
 	 //ATRIBUTOS 5
 	 long num;
 	 static long aux, digito, decimal;
 	 static int exponente;
 	 static boolean binario;
+	 
+
 	 
 	 
 	 
@@ -23,25 +29,6 @@ public class Biblioteca {
 	 }
 	 
 	 //CLASES
-//	 public void esBinario() {
-//		 do {
-//	            System.out.print("Introduce un numero binario: ");
-//	            num = entrada.nextLong();
-//	            
-//	            binario = true;
-//	            aux = num;
-//	            while (aux != 0) {
-//	                       digito = aux % 10; 
-//	                       if (digito != 0 && digito != 1) {
-//	                            binario = false; 
-//	                       }
-//	                      
-//	                       aux = aux / 10; 
-//	             }
-//	            
-//	        } while (!binario);
-//	 }
-
 	 
 	 public void cuentaNumeros(int numeros) {
 		 int longitud = 0;
@@ -51,9 +38,10 @@ public class Biblioteca {
 		 }
 		 
 	 }
-	 public void hazmeArray() {
+	 
+	 /*public void hazmeArray() {
 		 int n[] = new int[longitud];
-	 }
+	 }*/
 	 
 	 
 	 //PUNTO Nº1
@@ -64,11 +52,13 @@ public class Biblioteca {
 		else return false;
 	 }
 	
-	 public int dameN() {
+	 /*public int dameN() {
 		 
 		 return 
-	 }
+	 }*/
 	 //public int digitoN(int )
+	 
+	 
 	 //PUNTO Nº2
 	 public int voltea(int numeros) {
 		 int cifra;
@@ -83,13 +73,44 @@ public class Biblioteca {
 	 
 	 
 	 //PUNTO Nº3
-	 public int digitoN( int n) {
-		 
-		 return n;
-		 
-			 
+	 public int digitoN( int numeros, int n) {
+		 numeros = voltea(numeros);
+		 int cifra;
+		 int contador = 0;
+		 while(numeros != 0) {
+			cifra = numeros % 10;
+			numeros /= 10;
+			contador++;
+			if(contador == n)
+				return cifra;
+			
+		 }
+		 return 0;	 
 		 
 	 }
+	 
+	 
+	 //PUNTO Nº4
+	 public int posicionDeDigito( int numeros, int n) {
+		 numeros = voltea(numeros);
+		 int cifra;
+		 int contador = 0;
+		 while(numeros != 0) {
+			cifra = numeros % 10;
+			numeros /= 10;
+			contador++;
+			if(cifra == n) {
+				return contador;
+				
+			}
+		 }
+		 return -1;
+		 
+	 }
+	 
+	 
+	 
+	 
 	 //PUNTO Nº5
 	 public long binario(long num) {
 		 exponente = 0;
@@ -107,7 +128,7 @@ public class Biblioteca {
 		 return decimal;
 	 }
 	 
-	//1 es capicua
+	
 	
 	 
 	 

@@ -12,8 +12,8 @@ public class Ejercicios {
 		
 		Biblioteca uno = new Biblioteca();
 		Biblioteca dos = new Biblioteca();
-		//Biblioteca tres = new Biblioteca(321);
-		//Biblioteca cuatro = new Biblioteca();
+		Biblioteca tres = new Biblioteca(321);
+		Biblioteca cuatro = new Biblioteca();
 		Biblioteca cinco = new Biblioteca();
 		
 		
@@ -39,11 +39,33 @@ public class Ejercicios {
 			System.out.println("Dame una posicion n: ");
 			n = entrada.nextInt();
 			//posicion n
-			System.out.println();
+			System.out.println(tres.digitoN(entero, n));
 			break;
 			}
 			case 4:{
-				System.out.println("en obras, sentimos las molestias");
+//				System.out.println("en obras, sentimos las molestias");
+//				//break;
+//				
+//				// Texto
+//			    String sTexto = "123456789";
+//			    // Texto que vamos a buscar
+//			    String sTextoBuscado = "7";
+//			    // Contador de ocurrencias 
+//			    int contador = 1;
+//
+//			    for(int i=0; i < sTexto.length(); i++){
+//			    	int car = sTexto.charAt(i);
+//			    	if(sTextoBuscado.indexOf(car,0) == -1)
+//			    		contador++;
+//			    	else
+//			    		System.out.println(contador);
+//			 
+//			    }
+				System.out.println("Dame un numero entero: ");
+				entero = entrada.nextInt();
+				System.out.println("Dame el número del cual quieras saber su primera posición: ");
+				n = entrada.nextInt();
+				System.out.println(cuatro.posicionDeDigito(entero, n));
 				break;
 			}
 			case 5:{
